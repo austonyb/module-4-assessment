@@ -2,10 +2,24 @@
 <html>
   <head>
     <title>Back End Assessment</title>
+    <link rel="stylesheet" href="./styles.css">
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
-
+    <button id="fortune-cookie">Crack Open a Fortune Cookie!</button>
+    <br>
+      <div id="guest-log">
+        <h3>If you have felt inspired by visiting our site, please sign our digital guest log below:</h3>
+        <form id="signin-form">
+          <h1>Log In</h1>
+          <input 
+              type='text'
+              id="first-name"
+              placeholder="First Name"/>
+          <button id="submit-name">Sign Log</button>
+      </form>
+      </div>
+      
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
     
