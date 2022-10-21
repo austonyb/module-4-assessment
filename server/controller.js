@@ -23,10 +23,20 @@ module.exports = {
     },
 
     signLog: (req, res) => {
-        let {input} = req.body
-        guestLog.push(input)
+        let {name} = req.body
+        // console.log(req.body)
+        // console.log('data type sent back is: '+typeof(req.body))
+        guestLog.push(name)
         console.log(guestLog)
         res.status(200).send(guestLog)
+    },
+
+    printLog: (req, res) => {
+        res.status(200).send(guestLog)
+    },
+
+    editLog: (req, res) => {
+        
     }
 
 }
