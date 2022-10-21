@@ -1,3 +1,10 @@
+body {
+    direction: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -11,4 +18,18 @@ button {
     color: white;
     border-radius: 10px;
     font-size: large;
+}
+
+form {
+    direction: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#signin-form {
+    direction: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
