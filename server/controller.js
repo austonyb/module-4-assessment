@@ -35,8 +35,24 @@ module.exports = {
         res.status(200).send(guestLog)
     },
 
-    editLog: (req, res) => {
-        
+    editName: (req, res) => {
+        let { a,b } = req.body
+        let index = guestLog.indexOf(a)
+        guestLog.splice(index, 1, b)
+        // console.log(guestLog[index])
+        res.status(200).send(guestLog)
+    },
+
+    deleteName: (req, res) => {
+        let deleteName = req.params.name
+        deleteName = deleteName.substring(1, deleteName.length)
+        console.log(deleteName)
+
+        let index = guestLog.indexOf(deleteName)
+        if (index > -1) {
+            guestLog.splice(index,1)
+        }
+        res.status(200).send(guestLog)
     }
 
 }

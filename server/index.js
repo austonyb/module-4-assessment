@@ -7,7 +7,7 @@ app.use(cors());
 
 app.use(express.json());
 
-const { getCompliment, fortuneCookie, signLog, printLog, editLog } = require('./controller')
+const { getCompliment, fortuneCookie, signLog, printLog, editName, deleteName } = require('./controller')
 
 app.get("/api/compliment", getCompliment);
 
@@ -17,6 +17,8 @@ app.post("/api/signlog", signLog)
 
 app.get("/api/signlog", printLog)
 
-app.put("/api/signlog", editLog)
+app.put("/api/signlog", editName)
+
+app.delete("/api/signlog/:name", deleteName)
 
 app.listen(4000, () => console.log("Server running on 4000"));
